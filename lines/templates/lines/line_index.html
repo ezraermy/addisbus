@@ -1,0 +1,10 @@
+{% extends "lines/base.html" %}
+
+{% block body %} 
+<h1>Lines</h1>
+<ul>
+    {% for line in lines %} 
+    <li><a href="{% url 'line_detail' line.id %}">Line {{ line.id }}</a> {{line.origin}} to {{line.destination}}</li>
+    {% endfor %}
+</ul> 
+{% endblock %} 
